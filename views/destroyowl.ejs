@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Edit Owl Info</title>
+        <meta description='Edit Owl Info Page, info on one owl'
+        <meta charset='utf-8'/>
+        <link rel='stylesheet' type='text/css' href='../../css/styles.css' />
+    </head>
+    <body>
+        <div id='wrapper'>
+            <hr>
+            <h3>Destroy Owl Info</h3>
+            <hr>
+            <br>
+            <form id="editform" action="/owl/<%=owledit._id%>" method="POST">         
+                <p><strong>Existing Name: </strong><%= owldestroy.name %></p>
+                <br>
+                <label for="editname">Edit Name:</label>
+                <input type="text" name="editname" id="editname" value="<%= owledit.name %>">
+                <br><br>
+                <p><strong>Existing Description: </strong> <%= owldestroy.description %></p><br>
+                <label for="editdescription">Edit Description:</label>
+                <textarea cols="90" rows="10" name="editdescription" id="editdescription"><%= owldestroy.description %></textarea>
+                <br><br>
+                <input type="submit" name="submitdestroy" value="Submit Edit">
+            </form>    
+        </div>
+    </body>
+</html>

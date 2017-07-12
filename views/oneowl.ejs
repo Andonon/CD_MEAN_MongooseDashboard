@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Owl Info</title>
+        <meta description='Owl Info Page, info on one owl'
+        <meta charset='utf-8'/>
+        <link rel='stylesheet' type='text/css' href='../css/styles.css' />
+    </head>
+    <body>
+        <div id='wrapper'>
+            <h3>Owl info</h3>
+            <form id='gohome' action='/' method='GET'>
+                <input type="submit" name="gohome" value="Go Home">
+            </form>
+            <form id='createowl' action='/owl/new' method='GET'>
+                <input type="submit" name="createowl" value="Create an Owl">
+            </form>
+            <form id='editthisowl' action='/owl/edit/<%=owl._id%>' method='GET'>
+                <input type="submit" name="editowl" value="Edit this Owl">
+            </form>
+            <form id='destroythisowl' action='/owl/destroy/<%=owl._id%>' method='GET'>
+                <input type="submit" name="destroyowl" value="Destroy this Owl record">
+            </form>
+            <h6>Caution: clicking delete will permanently destroy the record, you cannot go back.</h6>
+            <br>
+            <hr>
+            <br>
+            <h4>Owl Info</h4>
+            <hr>
+            <br>
+            <p><strong>Name: </strong><%= owl.name %></p>
+            <p><strong>Description: </strong> <%= owl.description %></p>
+        </div>
+    </body>
+</html>

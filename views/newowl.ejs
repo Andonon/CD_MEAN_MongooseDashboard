@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Create an Owl</title>
+        <meta description='Page to create owls'
+        <meta charset='utf-8'/>
+        <link rel='stylesheet' type='text/css' href='../css/styles.css' />
+    </head>
+    <body>
+        <div id='wrapper'>
+            <h3>Create an Owl</h3>
+            <form id="createowl" action='/owl' method='POST'>
+                <label for="owlname">Owl Name</label>
+                <input type="text" name="owlname" value=""><br><br>
+                <label for="owldescription">Description</label><br>
+                <textarea name='owldescription' rows="5" cols="70"></textarea><br><br>
+                <input type="submit" name="submit" value="Create Owl">
+            </form>
+        </div>
+    </body>
+</html>

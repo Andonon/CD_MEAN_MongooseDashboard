@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Owl Dashboard</title>
+        <meta description='Owl Dashboard, app that shows you owls'
+        <meta charset='utf-8'/>
+        <link rel='stylesheet' type='text/css' href='css/styles.css' />
+    </head>
+    <body>
+        <div id='wrapper'>
+            <h3>Owl Tracker</h3>
+            <h4>This is where you will see all the Owls</h4>
+            <form id='createowl' action='/owl/new' method='GET'>
+                <input type="submit" name="submit" value="Create an Owl">
+            </form>
+            <br>
+            <hr>
+            <br>
+            <h4>Owls</h4>
+            <h6>click the owl name to view/edit owls</h6>
+            <br>
+            <% if(owls.length > 0) { %>
+                <% for(let i = 0; i < owls.length; i++){ %>
+                    <p><strong>Name: </strong><a href="/owl/<%=owls[i]._id%>"><%= owls[i].name %></a></p>
+                    <p><strong>Description: </strong> <%= owls[i].description %></p>
+                    <hr>
+                <% } %>
+            <% } else { %>
+                <p>There are no owls yet, create one!</p>
+            <% } %>
+        </div>
+    </body>
+</html>
